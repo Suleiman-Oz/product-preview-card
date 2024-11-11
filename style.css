@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fraunces", "Montserrat";
+}
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--primary-cream);
+}
+#container {
+  width: 330px;
+  margin: 50px auto;
+  background-color: var(--neutral-white);
+  border-radius: 10px;
+}
+img {
+  width: 330px;
+  height: 240px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.info {
+  margin: 26px;
+  padding-bottom: 30px;
+}
+.info span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--neutral-dark-grayish-blue);
+}
+.info h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.info > p {
+  font-size: 14px;
+  margin-right: 20px;
+  color: var(--neutral-dark-grayish-blue);
+  line-height: 1.5;
+}
+.price {
+  display: flex;
+  align-items: center;
+}
+.price p:first-child {
+  font-size: 2em;
+  color: var(--primary-dark-cyan);
+  font-weight: 900;
+  padding-right: 20px;
+}
+.price p:last-child {
+  color: var(--neutral-dark-grayish-blue);
+  text-decoration: line-through;
+}
+.add {
+  background-color: var(--primary-dark-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  margin-top: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  transition: background-color 2s ease;
+}
+.add:hover {
+  background-color: var(--neutral-very-dark-blue);
+  cursor: pointer;
+}
+.add img {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-cream);
+}
+.add > button {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-cream);
+  font-weight: 900;
+}
+@media (min-width: 376px) and (max-width: 1440px) {
+  #container {
+    display: flex;
+    width: 580px;
+  }
+  img {
+    height: 435px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+  .price {
+    margin-top: 15px;
+  }
+  .price p:first-child {
+    padding-right: 20px;
+    }
+  .info h1 {
+    margin-right: 10px;
+  }
+  .info > p {
+    margin-right: 15px;
+  }
+  .info {
+    margin-bottom: 0;
+  }
+  .add {
+    margin-top: 20px;
+  }
+}
